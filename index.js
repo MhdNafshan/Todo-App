@@ -25,3 +25,12 @@ $todoList.addEventListener('click', (e) => {
     li.style.textDecoration = e.target.checked ? 'line-through' : 'none';
   }
 });
+
+// Delete todo on double click
+$todoList.addEventListener('dblclick', (e) => {
+  const li = e.target.closest('li');
+  if (li) {
+    li.remove();
+  }
+});
+
